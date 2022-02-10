@@ -19,8 +19,8 @@
               ID="recaptcha"
               runat="server"
               Theme="red"
-              PublicKey="your_public_key"
-              PrivateKey="your_private_key"
+              PublicKey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"
+              PrivateKey="6LcG9WweAAAAAOwg2iS5c_aPvD85tFZbidlwPDfr"
               />
 
           <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
