@@ -1,13 +1,18 @@
-<html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body>
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
-</html>
+<form class="article" method="post" action="TBD">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </div>
+  <div>
+    <label for="email">Email</label><
+    <input type="email" id="email" name="email">
+  </div>
+  <div>
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message"></textarea>
+  </div>
+  <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"></div>
+  <div>
+    <input type="submit" value="Send" />
+  </div>
+</form>
