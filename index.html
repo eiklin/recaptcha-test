@@ -1,32 +1,13 @@
 <html>
-<head>
-<title>reCAPTCHA Demo</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-   $(document).ready(function() {
-      $("button").click(function() {
-         var x = $("form").serializeArray();
-         $.each(x, function(i, field) {$("#output").append(field.name + ":" + field.value + " ");});
-      });
-   });
-</script>
-<style>
-#GFG {
-   width: 300px;
-   padding: 50px;
-   height: 150px;
-   border: 2px solid green;
-}
-</style>
-</head>
-<body>
-<div id="GFG">
-<form action="#" id="demo-form" method="POST">
-Name: <input type="text" style="margin: 10px;" name="Name"></form>
-<div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"></div>
-<button type="submit">Submit</button>
-</div>
-<div id="output"></div>
-</body>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="test.htm" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
