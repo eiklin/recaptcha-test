@@ -2,11 +2,8 @@
   <head>
     <script>
     function recaptchaCallback() {
-        var btnSubmit = document.getElementById("btnSubmit");
-
-        if ( btnSubmit.classList.contains("hidden") ) {
-            btnSubmit.classList.remove("hidden");
-            btnSubmit.classList.add("show");
+      var btnSubmit = document.getElementById("btnSubmit");
+      btnSubmit.style.display = "block";
         }
     }
     </script>
@@ -24,7 +21,7 @@
   <body>
     <form>
       <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="recaptchaCallback"></div>
-      <button type="submit" class="btn btn-default hidden" id="btnSubmit">Submit</button>
+      <button type="submit" style="display:none;" id="btnSubmit">Submit</button>
     </form>
   </body>
 </html>
