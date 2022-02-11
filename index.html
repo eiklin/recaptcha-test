@@ -3,7 +3,7 @@
     <script>
     function callback() {
       var btnSubmit = document.getElementById("btnSubmit");
-      btnSubmit.style.display = "block";
+      btnSubmit.disabled = false;
     }
     </script>
     <style>
@@ -20,7 +20,7 @@
     <p>
     <form>
       <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="callback"></div>
-      <button type="submit" style="display:none;" id="btnSubmit">Submit</button>
+      <button type="submit" id="btnSubmit" disabled>Submit</button>
     </form>
     </p>
   </body>
