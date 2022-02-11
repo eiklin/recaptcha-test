@@ -1,21 +1,30 @@
 <html>
   <head>
-    <title>reCAPTCHA demo: Simple page</title>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<form>
-    <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="recaptchaCallback"></div>
-    <button type="submit" class="btn btn-default hidden" id="btnSubmit">Submit</button>
-</form>
-  </body>
-</html>
-
-<script>
+    <script>
     function recaptchaCallback() {
         var btnSubmit = document.getElementById("btnSubmit");
 
         if ( btnSubmit.classList.contains("hidden") ) {
             btnSubmit.classList.remove("hidden");
-            btnSubmitclassList.add("show");
+            btnSubmit.classList.add("show");
         }
     }
-</script>
+    </script>
+    <style>
+      .hidden {
+        display:none;
+      }
+      .show{
+        display:block;
+      }
+      </style>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form>
+      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="recaptchaCallback"></div>
+      <button type="submit" class="btn btn-default hidden" id="btnSubmit">Submit</button>
+    </form>
+  </body>
+</html>
