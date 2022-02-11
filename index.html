@@ -3,20 +3,16 @@
     <title>reCAPTCHA demo: Simple page</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-      function validate(){
-        if (grecaptcha.getResponse() == ""){
-          alert("You can't proceed!");
-          return false;
-        } else {
-          document.form.submit()
-        }
+      function validate() {
+        alert("hello");
+      }
     </script>
   </head>
   <body>
     <form method="POST" action="keys.htm">
-      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO"></div>
+      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="validate();"></div>
       <br/>
-      <input type="submit" value="Submit" onsubmit="javascript:validate();">
+      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
