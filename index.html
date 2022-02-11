@@ -2,6 +2,14 @@
   <head>
     <title>reCAPTCHA demo: Simple page</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>$("form").submit(function(event) {
+        var recaptcha = $("#g-recaptcha-response").val();
+        if (recaptcha === "") {
+          event.preventDefault();
+          alert("Please check the recaptcha");
+        }
+      });
+    </script>
   </head>
   <body>
     <form id="demo-form" method="POST">
