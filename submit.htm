@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Success!</title>
+  </head>
+  <body>
+    <script>
+      document.getElementById("status").value = getUrlParameter('');
+      document.getElementById("recaptcha").value = getUrlParameter('g-recaptcha-response');
+    </script>
+    Status: <input id="status"></input>
+    Response: <input id="recaptcha"></input>
+  </body>
+</html>
