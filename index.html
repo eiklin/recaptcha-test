@@ -1,23 +1,22 @@
 <html>
   <head>
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>$("form").submit(function(event) {
-        var recaptcha = $("#g-recaptcha-response").val();
-        if (recaptcha === "") {
-          event.preventDefault();
-          alert("Please check the recaptcha");
-        }
-      });
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO'
+        });
+      };
     </script>
   </head>
   <body>
-    <form id="demo-form" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback=
-"onSuccess" data-action="action"></div>
-      <br/>
+    <form action="?" method="POST">
+      <div id="html_element"></div>
+      <br>
       <input type="submit" value="Submit">
     </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
   </body>
 </html>
