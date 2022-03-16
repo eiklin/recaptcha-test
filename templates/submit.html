@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style>body, button {font-family: 'Roboto', sans-serif;}</style>
+<title>reCAPTCHA Result</title>
+</head>
+<body>
+    <div>The returned parameters from Google reCAPTCHA:
+        <ul>
+            <li>success: {{ success }}</li>
+            <li>challenge_ts: {{ challenge_ts }}</li>
+            <li>hostname: {{ hostname }}</li>
+        </ul>
+    </div>
+    <button onclick="window.location='/';">Back</button>
+</body>
+</html>

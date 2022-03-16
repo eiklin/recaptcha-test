@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style>body, button {font-family: 'Roboto', sans-serif;}</style>
+<title>reCAPTCHA Test</title>
+<script>function callback() {var btnSubmit = document.getElementById("btnSubmit");btnSubmit.disabled = false;}</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div>This is a simple test page for reCAPTCHA validation.</div>
+    <div>
+        <form action="/submit/" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="callback"></div>
+            <button type="submit" id="btnSubmit" disabled>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
