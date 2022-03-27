@@ -8,13 +8,13 @@
 <title>reCAPTCHA Result</title>
 </head>
 <body>
-    <div>The returned parameters from Google reCAPTCHA:
-        <ul>
-            <li>success: {{ success }}</li>
-            <li>challenge_ts: {{ challenge_ts }}</li>
-            <li>hostname: {{ hostname }}</li>
-        </ul>
-    </div>
-    <button onclick="window.location='/';">Back</button>
+    <p>The returned parameters from Google reCAPTCHA:</p>
+    <table cellpadding="5px;">
+        <tr><td align="right"><nobr>g-recaptcha-response:</nobr></td><td>{{ recaptcha_response }}</td></tr>
+        <tr><td align="right">success:</td><td>{{ success }}</td></tr>
+        <tr><td align="right">challenge_ts:</td><td>{{ challenge_ts }}</td></tr>
+        <tr><td align="right">hostname:</td><td>{{ hostname }}</td></tr>
+    </table>
+    <p><button onclick="window.location='/';">Back</button></p>
 </body>
 </html>

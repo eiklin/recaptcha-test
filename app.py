@@ -7,11 +7,6 @@ def index():
 
     return render_template('index.html')
 
-@app.route('/googlee4df84b135df732d.html')
-def google():
-
-    return render_template('googlee4df84b135df732d.html')
-
 @app.route('/result/', methods=['POST','GET'])
 def result():
 
@@ -36,5 +31,5 @@ def result():
     challenge_ts = result.get('challenge_ts')
     hostname = result.get('hostname')
 
-    return render_template('result.html',success=success,challenge_ts=challenge_ts,hostname=hostname)
+    return render_template('result.html',recaptcha_response=recaptcha_response,success=success,challenge_ts=challenge_ts,hostname=hostname)
 

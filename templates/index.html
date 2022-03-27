@@ -10,12 +10,10 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <div>This is a test page for reCAPTCHA validation.</div>
-    <div>
-        <form action="/result/" method="POST">
-            <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="callback"></div>
-            <button type="submit" id="btnSubmit" disabled>Submit</button>
-        </form>
-    </div>
+    <p>This is a Python test page for reCAPTCHA validation.</p>
+    <form action="/result/" method="POST">
+        <div class="g-recaptcha" data-sitekey="6LcG9WweAAAAAET-fXuAxHhJSBSX8XJN1d1s8OnO" data-callback="callback"></div>
+        <p><button type="submit" id="btnSubmit" disabled>Submit</button></p>
+    </form>
 </body>
 </html>
