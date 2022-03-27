@@ -16,7 +16,7 @@ def result():
 
     uri_recaptcha = 'https://www.google.com/recaptcha/api/siteverify'
     recaptcha_response = request.form.get("g-recaptcha-response")
-    secret_key = '6LcG9WweAAAAAOwg2iS5c_aPvD85tFZbidlwPDfr'
+    secret_key = ''
     remote_ip = request.remote_addr
     params = urlencode({
         'secret': secret_key,
